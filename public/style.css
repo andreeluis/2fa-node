@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 800px;
+  max-width: 90%;
+  margin: 1rem auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #ccc;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+
+  & form {
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #222;
+    border-radius: 5px;
+    background-color: #fff;
+
+    & input {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      border: 1px solid #222;
+      border-radius: 5px;
+    }
+
+    & button {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      border: 1px solid #222;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  & h2 {
+    text-align: center;
+    color: #222;
+    margin: 1rem auto 0;
+  }
+
+  & .qrcode {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      margin: 0.5rem;
+    }
+  }
+}
+
+#totp-section {
+  display: none;
+
+  & .result {
+    display: none;
+    justify-content: center;
+    margin: auto;
+    width: 400px;
+    max-width: 90%;
+    padding: 1rem;
+    border: 1px solid #222;
+    border-radius: 1rem;
+
+
+    &.Success {
+      background-color: green;
+      color: #fff;
+    }
+
+    &.Invalid {
+      background-color: red;
+      color: #fff;
+    }
+  }
+}

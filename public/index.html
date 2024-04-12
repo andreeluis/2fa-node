@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script>
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>TOTP</title>
+</head>
+<body>
+  <h1>TOTP - SecID</h1>
+
+  <section>
+    <h2>Gerar TOTP</h2>
+    <form id="user-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <button type="submit">Gerar</button>
+    </form>
+  </section>
+
+  <section id="totp-section">
+    <div class="qrcode">
+      <h2>QR Code</h2>
+      <div id="qrcode"></div>
+    </div>
+
+    <h2>Validar TOTP</h2>
+    <form id="totp-form">
+      <label for="token">TOTP:</label>
+      <input type="text" name="token" id="token" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code"/>
+      <button type="submit">Validar</button>
+    </form>
+
+    <div class="result"></div>
+  </section>
+</body>
+</html>
